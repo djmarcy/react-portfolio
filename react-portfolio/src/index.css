@@ -1,13 +1,298 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+button {
+  width: 33%;
+  color: #212529;
+  background-color: none;
+  border: 1.5px solid #e3e3e3;
+  text-align: center;
+  padding: 0.375rem 0.75rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  height: 100px;
+  width: 100%;
+  z-index: 1;
+}
+
+.body {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+/* About Me */
+.top-row {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.top-row h2 {
+  text-align: center;
+}
+
+.about-me-btn,
+.portfolio-btn {
+  width: 33%;
+  max-width: 300px;
+  border: 1.5px solid #e3e3e3;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dylan-img,
+.salem-img {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Portfolio */
+
+.highlighted-project-container {
+  margin: 15px 0;
+}
+
+.highlighted-project {
+  display: block;
+  width: 400px;
+  max-width: 75%;
+  aspect-ratio: 1/1;
+  border: 2px solid #dee2e2;
+  margin: 0 auto;
+  background-image: url("https://github.com/djmarcy/palabra/blob/main/assets/images/onLoad.PNG?raw=true");
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.highlighted-project a {
+  width: 400px;
+  max-width: 75%;
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+}
+
+.highlight-label {
+  margin: 0 auto;
+  width: 50%;
+  height: 15%;
+  background-color: #dee2e2;
+  color: black;
+  transition: opacity 0.5s;
+  opacity: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.highlighted-project:hover > .highlight-label {
+  margin-top: 25%;
+  font-size: 166%;
+  width: 50%;
+  height: 50%;
+  opacity: 0.75;
+  transition: 0.5s;
+}
+
+/* Potrfolio */
+
+.portfolio-button {
+  background-image: none;
+  background-color: #dee2e2;
+  color: black;
+  display: block;
+  margin: 25px auto 0;
+  border: solid 1px #dee2e2;
+}
+
+.highlighted-button {
+  max-width: 300px;
+  margin-bottom: 25px;
+}
+
+.portfolio-button:hover,
+.portfolio-button:focus,
+.portfolio-button:active {
+  background-image: none;
+  background-color: #faf9f6;
+  color: black;
+  border: solid 1px #dee2e2;
+}
+
+/* ##Projects Opacity Controller */
+.opacity {
+  transition: opacity 0.5s;
+  opacity: 50%;
+}
+
+.opacity:hover,
+.opacity:hover > .highlighted-project,
+.opacity:hover > .other-projects-label {
+  cursor: pointer;
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+
+/* ##Other Projects (Carousel Placeholder) */
+.project-carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.project-carousel .portfolio-button {
+  margin-bottom: 45px;
+}
+
+.project-carousel a:hover,
+.project-carousel a:focus {
+  text-decoration: none;
+}
+
+.other-projects-title {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.other-projects {
+  width: 300px;
+  aspect-ratio: 1/1;
+  opacity: 50%;
+  transition: 0.5s;
+  border: 2px solid #dee2e2;
+  margin: 0 auto;
+}
+
+.other-projects-label {
+  margin: 0 auto;
+  width: 75%;
+  height: 25%;
+  background-color: #dee2e2;
+  color: black;
+  text-align: center;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+}
+
+.project-1:hover > .label-1,
+.project-2:hover > .label-2,
+.project-3:hover > .label-3 {
+  margin-top: 12.5%;
+  font-size: 166%;
+  width: 75%;
+  height: 75%;
+  opacity: 0.75;
+  transition: 0.5s;
+}
+
+/* ###Other Projects BG Images */
+.project-1,
+.project-2,
+.project-3 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.project-1 {
+  background-image: url("https://github.com/djmarcy/pt-planner/blob/main/assets/imgs/Screenshot_12.png?raw=true");
+}
+
+.project-2 {
+  background-image: url("https://github.com/djmarcy/forecast-tracker/blob/main/assets/imgs/dashboard.png?raw=true");
+}
+
+.project-3 {
+  background-image: url("https://github.com/djmarcy/pt-password-gen/blob/main/assets/imgs/password-generator.png?raw=true");
+}
+
+/* Contact */
+.contact-container {
+  margin: 0 auto;
+  width: 33%;
+  border: solid 3px #dee2e2;
+  margin-bottom: 50px;
+  padding: 25px;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 150%;
+}
+
+.contact-title:not(:first-child) {
+  margin-top: 25px;
+}
+
+/* #Footer */
+.footer {
+  padding: 45px;
+  justify-content: center;
+  background-color: #232526;
+  color: white;
+  width: 100%;
+}
+
+/* #Media Query */
+@media only screen and (max-width: 991px) {
+  header {
+    display: block;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  nav {
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .dylan-img,
+  .salem-img {
+    margin-bottom: 25px;
+  }
+
+  .contact-container {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav ul li {
+    display: block;
+  }
 }
