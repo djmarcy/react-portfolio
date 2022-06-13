@@ -30,8 +30,7 @@ const AboutMe = () => {
           Colorful Colorado. While I currently work in communications, I have a
           background in everything from web dev to community management to
           customer service. My wide range and versatile skillset make me an
-          asset to any team, and I enjoy finding my niche wherever I end up! If
-          you
+          asset to any team, and I enjoy finding my niche wherever I end up!
         </p>
 
         <h3>Dylan Specialties Include:</h3>
